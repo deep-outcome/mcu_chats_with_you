@@ -26,7 +26,7 @@ fn entry() -> ! {
 
     let text = "UGLY-MAXIMAL abcdefghijklmnopqrstuvwxyz 1234567890";
 
-    // each char is followed by spacing (= 2×) and 4 spacings are appended to append
+    // each char is followed by spacing (= 2×) and 4 spacings are appended to end
     // text.len() = 50 thus 104
     let mut col_defs = [<&[u8]>::default(); 104];
     ug_max::col_defs(text, &mut col_defs);
