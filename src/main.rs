@@ -48,7 +48,7 @@ fn entry() -> ! {
                 // append new column
                 for rix in 0..5 {
                     let mask = 1 << rix;
-                    disp_latt[rix][4] = column & mask;
+                    disp_latt[rix][4] = if column & mask == mask { 1 } else { 0 };
                 }
 
                 display.show(&mut timer, disp_latt, 150);
