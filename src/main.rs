@@ -29,7 +29,7 @@ fn entry() -> ! {
     // each char is followed by spacing (= 2×) and 4 spacings are appended to end
     // text.len() = 50 thus 104
     let mut col_defs = [<&[u8]>::default(); 104];
-    ug_max::col_defs(text, &mut col_defs);
+    ug_max::col_defs(text, 4, &mut col_defs);
 
     // for ever
     loop {
