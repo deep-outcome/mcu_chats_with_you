@@ -28,7 +28,7 @@ fn entry() -> ! {
 
     // each char is followed by spacing (= 2×) and 4 spacings are appended to end
     // text.len() = 50 thus 104
-    // note: ug_max: 3.0.0 does not append spacing to last `char`
+    // note: ug_max 3.0.0 does not append spacing to last `char`
     let mut col_defs = [<&[u8]>::default(); 104];
     ug_max::col_defs(text, 4, &mut col_defs);
 
