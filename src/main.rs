@@ -24,13 +24,11 @@ fn entry() -> ! {
         [0, 0, 0, 0, 0],
     ];
 
-    let text = "UGLY-MAXIMAL abcdefghijklmnopqrstuvwxyz 1234567890";
-
-    // each char is followed by spacing (= 2×) and 4 spacings are appended to end
-    // text.len() = 50 thus 104
-    // note: ug_max 3.0.0 does not append spacing to last `char`
-    let mut col_defs = [<&[u8]>::default(); 104];
-    ug_max::col_defs(text, 4, &mut col_defs);
+    // 5 extra spaces at end servers for fade-out effect
+    const TEXT: &str = "UGLY-MAXIMAL abcdefghijklmnopqrstuvwxyz 1234567890";
+    const extra_sp: usize = 5;
+    let mut col_defs = [<&[u8]>::default(); ug_max::buff_size(TEXT, extra_sp)];
+    ug_max::col_defs(TEXT, extra_sp, &mut col_defs);    
 
     // for ever
     loop {
