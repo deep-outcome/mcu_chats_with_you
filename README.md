@@ -2,7 +2,7 @@
 Basic micro:bit v2 display messaging with constant brightness.
 
 #### Show
-![software9119.technology](https://github.com/bravequickcleverfibreyarn/mcu_chats_with_you/blob/main/pre/software9119.technology.gif)
+![software9119.technology](https://github.com/deep-outcome/mcu_chats_with_you/blob/main/pre/software9119.technology.gif)
 
 #### Guide
 
